@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management System</title>
+    <link rel="stylesheet" href="contactlist.css">
+</head>
+
+<body>
+    <header id="head-section">
+        <ul>
+            <li><a href="#" id="home-link">CMS</a></li>
+            <li><a href="#" onclick="toggleForm('register-section')">REGISTER</a></li>
+            <li><a href="#" onclick="toggleForm('login-section')">LOGIN</a></li>
+        </ul>
+    </header>
+
+    <div id="login-section" class="form-section">
+        <h1>Login</h1>
+        <form onsubmit="login(event)">
+            <label>Email</label>
+            <input type="text" value="" placeholder="Enter your email" id="l-email" required>
+            <label>Password</label>
+            <input type="password" value="" placeholder="Enter your password" id="l-password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="toggleForm('register-section')">Register here</a></p>
+    </div>
+
+    <div id="register-section" class="form-section">
+        <h1>Register</h1>
+        <form onsubmit="signup(event)">
+            <label>First Name</label>
+            <input type="text" value="" placeholder="Enter your first name" id="s-firstname" required>
+            <label>Last Name</label>
+            <input type="text" value="" placeholder="Enter your last name" id="s-lastname" required>
+            <label>Email</label>
+            <input type="text" value="" placeholder="Enter your email" id="s-email" required>
+            <label>Password</label>
+            <input type="password" value="" placeholder="Enter your password" id="s-password" required>
+            <label>Confirm Password</label>
+            <input type="password" value="" placeholder="Confirm your password" id="s-confirmpassword" required>
+            <button type="submit">Submit</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="toggleForm('login-section')">Login here</a></p>
+    </div>
+
+    <div id="accountcreate-section" class="form-section">
+        <h1>Create Your Contact</h1>
+        <form onsubmit="createContact(event)">
+            <label>First Name</label>
+            <input type="text" value="" placeholder="Enter first name" id="c-firstname" required>
+            <label>Last Name</label>
+            <input type="text" value="" placeholder="Enter last name" id="c-lastname" required>
+            <label>Email</label>
+            <input type="text" value="" placeholder="Enter email" id="c-email" required>
+            <label>Address</label>
+            <input type="text" value="" placeholder="Enter address" id="c-address" required>
+            <label>Contact Number</label>
+            <input type="number" value="" placeholder="Enter contact number" id="c-contactno" required>
+            <button type="submit">Add Contact</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="toggleForm('login-section')">Login here</a></p>
+    </div>
+
+    <script src="contactlist.js"></script>
+</body>
+
+</html>
